@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Arrays;
+
 @RestController
 @RequestMapping
 @RequiredArgsConstructor
@@ -29,11 +31,15 @@ public class Controller {
 
     /**
      * Demonstrate incorrect work, when we sent request to NOT "trusted" server.
-     * @return throws sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+     * @return MUST throws sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
      */
     @GetMapping("/test")
     public String test2() {
-        return restTemplate.exchange(NOT_TRUSTED_SERVER + "/entries", HttpMethod.GET, null, String.class).getBody();
+        try{
+            return restTemplate.exchange(NOT_TRUSTED_SERVER + "/entries", HttpMethod.GET, null, String.class).getBody();
+        } catch (Exception e) {
+            return e.getMessage();
+        }
     }
 
 

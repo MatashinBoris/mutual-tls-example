@@ -9,17 +9,11 @@ server:
   ssl:
     enabled: true
 
-    key-store: classpath:keystore.jks
-    key-store-password: boris5
-    key-password: boris
-    key-alias: localhost
+    key-store: classpath:tls/server_keystore.jks
+    key-store-password: server_keystore
+    key-password: serverKey
+    key-alias: ggp_server
 
-    trust-store: classpath:truststore.jks
-    trust-store-password: boris7
+    trust-store: classpath:tls/server_truststore.jks
+    trust-store-password: server_truststore
     client-auth: need
-
-spring:
-  security:
-    user:
-      name: ADMIN
-      password: ADMIN
