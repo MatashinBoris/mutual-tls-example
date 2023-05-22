@@ -19,7 +19,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
-    private static final String TRUSTED_USER_COMMON_NAME = "Bob";
+    private static final String TRUSTED_GGP_NAME = "client";
 
     /**
      * We take from certificate CN (Common Name "CN" - its value hardcoded in certificate, for example "clientBob.p12" contains CN "Bob")
@@ -46,8 +46,9 @@ public class SecurityConfig {
                 /**
                  * Its mock implementation, instead userRepository.findByUserName(), or id().
                  * "username" arg get from .x509() config.
+                 * TRUSTED_GGP_NAME its a client name (CN)
                  */
-                if (username.equals(TRUSTED_USER_COMMON_NAME)) {
+                if (username.equals(TRUSTED_GGP_NAME)) {
                     return new User(username, "",
                             AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
                 }
