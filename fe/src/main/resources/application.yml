@@ -2,7 +2,7 @@ server:
   port: 8088
 #
 #bob
-tsl:
+tls:
   key-store:
     url: classpath:tls/client_keystore.jks
     password: client_keystore

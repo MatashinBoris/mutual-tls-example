@@ -19,15 +19,15 @@ import javax.net.ssl.SSLContext;
 @RequiredArgsConstructor
 public class RestClientConfig {
     private static final String TLS_PROTOCOL = "TLS";
-    @Value("${tsl.key-store.url}")
+    @Value("${tls.key-store.url}")
     private String keyStorePath;
-    @Value("${tsl.key-store.password}")
+    @Value("${tls.key-store.password}")
     private String keyStorePassword;
-    @Value("${tsl.key-store.server-certificate.password}")
+    @Value("${tls.key-store.server-certificate.password}")
     private String clientCertificatePassword;
-    @Value("${tsl.trust-store.url}")
+    @Value("${tls.trust-store.url}")
     private String trustStorePath;
-    @Value("${tsl.trust-store.password}")
+    @Value("${tls.trust-store.password}")
     private String trustStorePassword;
     private final ResourceLoader resourceLoader;
 
