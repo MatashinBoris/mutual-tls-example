@@ -1,0 +1,25 @@
+#server:
+#  ssl:
+#    enabled: true
+#    key-store: classpath:keystore/keystore.p12
+#    key-store-password:
+
+server:
+  port: 8443
+  ssl:
+    enabled: true
+
+    key-store: classpath:keystore.jks
+    key-store-password: boris5
+    key-password: boris
+    key-alias: localhost
+
+    trust-store: classpath:truststore.jks
+    trust-store-password: boris7
+    client-auth: need
+
+spring:
+  security:
+    user:
+      name: ADMIN
+      password: ADMIN

@@ -1,0 +1,13 @@
+server:
+  port: 8088
+#
+#bob
+tsl:
+  key-store:
+    url: classpath:tsl/certificate/client_keystore.jks
+    password: bobbob123
+    server-certificate:
+      password: bob123
+  trust-store:
+    url: classpath:tsl/trustStore/bobtruststore.jks
+    password: bob12345
