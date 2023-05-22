@@ -9,11 +9,11 @@ server:
   ssl:
     enabled: true
 
-    key-store: classpath:server_keystore.jks
+    key-store: classpath:tls/server_keystore.jks
     key-store-password: server_keystore
     key-password: serverKey
-    key-alias: localhost
+    key-alias: ggp_server
 
-    trust-store: classpath:server_truststore.jks
+    trust-store: classpath:tls/server_truststore.jks
     trust-store-password: server_truststore
     client-auth: need

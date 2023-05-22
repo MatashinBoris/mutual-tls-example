@@ -4,10 +4,10 @@ server:
 #bob
 tsl:
   key-store:
-    url: classpath:tsl/certificate/client_keystore.jks
-    password: bobbob123
+    url: classpath:tls/client_keystore.jks
+    password: client_keystore
     server-certificate:
-      password: bob123
+      password: clientKey
   trust-store:
-    url: classpath:tsl/trustStore/bobtruststore.jks
-    password: bob12345
+    url: classpath:tls/client_truststore.jks
+    password: client_truststore

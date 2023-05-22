@@ -19,7 +19,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
-    private static final String TRUSTED_GGP_NAME = "client";
+    private static final String TRUSTED_GGP_NAME = "localhost";
 
     /**
      * We take from certificate CN (Common Name "CN" - its value hardcoded in certificate, for example "clientBob.p12" contains CN "Bob")
