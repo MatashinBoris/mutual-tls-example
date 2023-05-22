@@ -1,13 +1,13 @@
-package com.ggp.fe;
+package com.ggp.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FeApplication {
+public class ServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FeApplication.class, args);
+		SpringApplication.run(ServerApplication.class, args);
 	}
 
 }
